@@ -33,6 +33,10 @@ function loginValidate() {
         inputPassword.classList.add("is-invalid");
         document.getElementById("passwordFeedback").textContent = "Este campo es obligatorio";
         acumErrors++;
+    } else if (String(inputPassword.value).length <= 3) {
+        inputEmail.classList.add("is-invalid");
+        document.getElementById("passwordFeedback").textContent = "Password demasiado corto";
+        acumErrors++;
     } else {
         inputPassword.classList.remove("is-invalid");
         inputPassword.classList.add("is-valid");
