@@ -1,0 +1,23 @@
+{
+  "name": "m07_03-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarioBurgos/M07_03-JavaScript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarioBurgos/M07_03-JavaScript/issues"
+  },
+  "homepage": "https://github.com/MarioBurgos/M07_03-JavaScript#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
