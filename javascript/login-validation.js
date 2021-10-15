@@ -1,4 +1,4 @@
-const form = document.getElementById("myFormId");
+const form = document.getElementById("loginFormId");
 
 form.addEventListener('blur', (event) => {
     console.log(event);
@@ -10,9 +10,10 @@ form.addEventListener('blur', (event) => {
 function loginValidate() {
     var acumErrors = 0;
 
-    //     var inputEmail = document.forms["loginForm"]["inputEmail"]; //TODO: investigar por qué esta línea no funciona
-    var inputEmail = document.getElementById("inputEmail");
-    var inputPassword = document.getElementById("inputPassword");
+    var inputEmail = document.forms["loginForm"]["inputEmail"];
+    var inputPassword = document.forms["loginForm"]["inputPassword"];
+    // var inputEmail = document.getElementById("inputEmail");
+    // var inputPassword = document.getElementById("inputPassword");
 
     form.classList.remove('is-invalid');
 
@@ -34,6 +35,7 @@ function loginValidate() {
         acumErrors++;
     } else {
         inputPassword.classList.remove("is-invalid");
+        inputPassword.classList.add("is-valid");
 
     }
 

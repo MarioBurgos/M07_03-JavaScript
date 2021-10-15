@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing page</title>
     <link rel="stylesheet" href="css/styles.css">
-    <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
     <!-- FontAwesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
 </head>
@@ -111,8 +110,7 @@
                         <!-- LOGIN FORM -->
                         <section class="card p-4 h-100">
                             <h4 class="text-center pb-3">Accede con tus datos</h4>
-
-                            <form method="get" action="logged-in.html" id="myFormId" onsubmit="return loginValidate()" name="myForm">
+                            <form method="get" action="logged-in.html" id="loginFormId" onsubmit="return loginValidate();" name="loginForm">
                                 <div class="mb-3">
                                     <label for="inputEmail" class="form-label">Email</label>
                                     <input type="text" class="form-control" id="inputEmail" name="inputEmail" aria-describedby="emailHelp" placeholder="Introduce tu email completo">
@@ -141,7 +139,7 @@
                     <div class="row mb-lg-0 mb-sm-4 px-2 flex-grow-1">
                         <section class="card p-4 h-100 d-flex justify-content-center ">
                             <h4 class="text-center pb-4">Haz un pedido sin registrarte</h4>
-                            <button class="btn btn-danger">PEDIR</button>
+                            <button class="btn btn-danger text-white">PEDIR</button>
                         </section>
                     </div>
                 </div>
@@ -227,8 +225,9 @@
                     <div class="card-title py-2">
                         <h5 class="h5">Suscribete a nuestra Newsletter</h5>
                     </div>
-                    <form class="form-control-lg">
-                        <input type="text" class="w-100 px-3" placeholder="Introduce tu email de contacto">
+                    <form class="form-control-lg" method="get" action="sub-success.html" id="newsForm" onsubmit="return newsletterValidate();" name="newsForm">
+                        <input type="text" class="form-control" id="inputEmail" name="inputEmail" aria-describedby="emailHelp" placeholder="Introduce tu email completo">
+                        <div id="emailFeedback" class="invalid-feedback"></div>
                         <button class="btn btn-warning w-100 my-3 ">Suscribirse</button>
                     </form>
                 </div>
@@ -236,8 +235,11 @@
         </div>
     </footer>
 
-    <!-- JS Login Validator -->
+    <!-- JS Form Validations -->
+
+
     <script src="/javascript/login-validation.js"></script>
+    <script src="/javascript/newsletter-validation.js"></script>
 </body>
 
 </html>
