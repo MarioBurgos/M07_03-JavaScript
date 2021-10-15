@@ -30,6 +30,10 @@ function registerValidate() {
         inputPassword.classList.add("is-invalid");
         document.getElementById("errorPassword").textContent = "El campo es obligatorio";
         acumErrores++;
+    } else if (!validarPassword(inputPassword.value)) {
+        inputPassword.classList.add("is-invalid");
+        document.getElementById("errorPassword").textContent = "La contraseña debe tener mínimo 8 caracteres, una mayúscula y un número.";
+        acumErrores++;
     }
 
     if (inputAddress.value == "") {
@@ -80,6 +84,11 @@ form.addEventListener('blur', (event) => {
 function validar_email(email) {
     var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(email) ? true : false;
+}
+
+function validarPassword(pass) {
+    var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+    return regex.test(pass) ? true : false;
 }
 
 function validarZip(zip) {
