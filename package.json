@@ -1,7 +1,6 @@
 {
   "name": "m07_03-javascript",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +18,6 @@
   "homepage": "https://github.com/MarioBurgos/M07_03-JavaScript#readme",
   "dependencies": {
     "bootstrap": "^5.1.3"
-  }
+  },
+  "description": ""
 }
