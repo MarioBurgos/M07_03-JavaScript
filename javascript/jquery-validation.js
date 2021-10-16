@@ -6,7 +6,6 @@ $(document).ready(function() {
         validClass: "is-valid",
         errorElement: "small",
 
-
         rules: {
             inputEmail: {
                 required: true,
@@ -54,10 +53,10 @@ $(document).ready(function() {
                 minlength: "Demasiado corto.",
                 regexZip: "Código Postal incorrecto."
             },
-            gridCheck: { required: "Debe aceptar la política de privacidad." },
-
-
-
+            gridCheck: "Debe aceptar la política de privacidad.",
+        },
+        submitHandler: function(form) {
+            form.submit();
         }
     });
     $.validator.addMethod("regexEmail", function(value, element) {
@@ -65,12 +64,13 @@ $(document).ready(function() {
         return this.optional(element) || pattern.test(value);
     });
     $.validator.addMethod("regexPassword", function(value, element) {
-        var pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+        var pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/; //no acepta caracteres especiales: #$%&
         return this.optional(element) || pattern.test(value);
     });
     $.validator.addMethod("regexZip", function(value, element) {
         var pattern = /^(?:0[1-9]|[1-4]\d|5[0-2])\d{3}$/;
         return this.optional(element) || pattern.test(value);
     });
+
 
 });

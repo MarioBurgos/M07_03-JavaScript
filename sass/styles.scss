@@ -51,6 +51,10 @@ $light: #efefef;
 
 /*Overridden Classes*/
 
+.is-invalid {
+    color: #fd2424 !important
+}
+
 .card:hover {
     transform: scale(1.01);
 }
