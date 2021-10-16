@@ -24,6 +24,8 @@ function registerValidate() {
         inputEmail.classList.add("is-invalid");
         document.getElementById("errorEmail").textContent = "El email no cumple el formato";
         acumErrores++;
+    } else {
+        inputEmail.classList.add("is-valid");
     }
 
     if (inputPassword.value == "") {
@@ -34,36 +36,48 @@ function registerValidate() {
         inputPassword.classList.add("is-invalid");
         document.getElementById("errorPassword").textContent = "La contraseña debe tener mínimo 8 caracteres, una mayúscula y un número.";
         acumErrores++;
+    } else {
+        inputPassword.classList.add("is-valid");
     }
 
     if (inputAddress.value == "") {
         inputAddress.classList.add("is-invalid");
         document.getElementById("errorAddress").textContent = "El campo es obligatorio";
         acumErrores++;
+    } else {
+        inputAddress.classList.add("is-valid");
     }
 
     if (inputProvince.value == "") {
         inputProvince.classList.add("is-invalid");
         document.getElementById("errorProvince").textContent = "La provincia es obligatoria";
         acumErrores++;
+    } else {
+        inpuinputProvince.classList.add("is-valid");
     }
 
     if (inputCity.value == "") {
         inputCity.classList.add("is-invalid");
         document.getElementById("errorCity").textContent = "Falta la ciudad";
         acumErrores++;
+    } else {
+        inputCity.classList.add("is-valid");
     }
 
     if (!validarZip(inputZip.value)) {
         inputZip.classList.add("is-invalid");
         document.getElementById("errorZip").textContent = "El codigo postal no cumple los requisitos";
         acumErrores++;
+    } else {
+        inputZip.classList.add("is-valid");
     }
 
     if (!gridCheck.checked) {
         gridCheck.classList.add("is-invalid");
         document.getElementById("errorCheck").textContent = "Debes aceptar las bases";
         acumErrores++;
+    } else {
+        gridCheck.classList.add("is-valid");
     }
 
     if (acumErrores > 0) {
