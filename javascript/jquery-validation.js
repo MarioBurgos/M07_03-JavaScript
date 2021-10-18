@@ -64,7 +64,7 @@ $(document).ready(function() {
         return this.optional(element) || pattern.test(value);
     });
     $.validator.addMethod("regexPassword", function(value, element) {
-        var pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/; //no acepta caracteres especiales: #$%&
+        var pattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!"·$%&/()=?¿ºª|@#~€¬{}*])[A-Za-z\d@$!%*#?&]{8,}$/;
         return this.optional(element) || pattern.test(value);
     });
     $.validator.addMethod("regexZip", function(value, element) {

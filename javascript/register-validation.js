@@ -101,7 +101,7 @@ function validar_email(email) {
 }
 
 function validarPassword(pass) {
-    var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+    var regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!"·$%&/()=?¿ºª|@#~€¬{}*])[A-Za-z\d@$!%*#?&]{8,}$/;
     return regex.test(pass) ? true : false;
 }
 
