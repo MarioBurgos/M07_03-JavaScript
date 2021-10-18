@@ -73,11 +73,6 @@
   color: #fd2424 !important;
 }
 
-.card:hover {
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
-}
-
 .custom-carousel-caption {
   position: absolute;
   right: 0%;
@@ -96,6 +91,15 @@
 }
 
 /*Custom Classes*/
+.w-lg-50 {
+  width: 50%;
+}
+
+.register-container {
+  width: 60%;
+  margin: auto;
+}
+
 .bg-yummy {
   background-image: url("/images/background/bg-yummy.jpg");
   background-position: 0;
